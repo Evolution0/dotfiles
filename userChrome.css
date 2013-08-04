@@ -1,0 +1,141 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+tab {
+	-moz-appearance: none !important;
+	background-color: #383A3B !important;
+	border: none !important;
+	font-size: 10px !important;
+	font-family: monospace !important;
+	text-align: center !important;
+}
+tab[selected="true"] {
+	background-color: #424445 !important;
+	color: #EEEEEE !important;
+	border: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+tab:not([selected="true"]) {
+	background-color: #383A3B !important;
+	color: #CCCCCC !important;
+	border: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.tabbrowser-tab[fadein]:not([pinned]) {
+    min-width: 0px !important;
+    max-width: 2000px !important;
+}
+#tabbrowser-tabs {
+    background: #080808 !important;
+    border: none !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    border-bottom: 0px solid #bdbdbd !important;
+}
+.tabbrowser-tab {
+	height: 18px !important;
+	min-height: 18px !important;
+	max-height: 18px !important;
+    border: 0px solid #808080 !important;
+    border-left: 0px solid #808080 !important;
+    border-right: 0px solid #808080 !important;
+    border-radius: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    background: #080808 !important;
+    margin-bottom: 0px !important;
+    margin: 0px !important;
+}
+.tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover
+{background: #3D3F40 !important;}
+.tab-image-right, .tab-image-left, .tab-image-middle, #addon-bar {
+	min-height: 20px !important;
+	max-height: 20px !important;
+}
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox .scrollbutton-down,
+.tabbrowser-arrowscrollbox .scrollbutton-down-box,
+.tabbrowser-tabs .tabs-alltabs-box,
+.tabbrowser-tabs .tabs-alltabs-box-animate,
+.tabbrowser-tabs .tabs-alltabs-button {
+	height: 18px !important;
+	margin: 1px !important;
+}
+.searchbar-textbox {
+	max-height: 20px !important;
+	-moz-appearance: none !important;
+}
+#search-container, #searchbar {
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 20px !important;
+	max-height: 20px !important;
+	font-size: 10px !important;
+	font-family: monospace !important;
+	-moz-appearance: none !important;
+}
+#urlbar-container::before {
+	display: block !important;
+	content: '▶' !important;
+	font-size: 10px !important;
+	font-family: monospace !important;
+	color: #4D679A !important;
+	padding: 4px !important;
+	margin: 0px -4px 0px 2px !important;
+	min-width: 10px !important;
+	min-height: 20px !important;
+	max-height: 20px !important;
+}
+#content browser {
+	margin-right: -14px !important;
+	visibilty: hidden !important;
+	overflow-y: hidden !important;
+	overflow-x: hidden !important;
+}
+.tab-icon-image {
+	visibility: hidden!important;
+	margin-left: -8px;
+}
+#urlbar {
+	padding: 0px !important;
+	margin: 0px 0px -1px 2px !important;
+	border: none !important;
+	max-height: 20px !important;
+	background: #383A3B !important;
+	-moz-appearance: none!important;
+	font-size: 10px !important;
+	font-family: monospace !important;
+	color: #FFFFFF !important;
+}
+#urlbar-container {
+	background-color: #383A3B !important;
+	max-height: 20px !important;
+}
+#main-window {height: 20px;}
+#context-back, #context-forward {
+	visibility: visible !important;
+	display: inline !important;
+}
+/* Hidden Stuff */
+#BMB_viewBookmarksToolbar, #BMB_viewBookmarksToolbar+menuseparator,
+#BMB_bookmarksShowAll, #BMB_bookmarksShowAll+menuseparator,
+#BMB_bookmarkThisPage, #BMB_subscribeToPageMenuitem,
+#BMB_subscribeToPageMenupopup, #BMB_subscribeToPageMenupopup+menuseparator,
+#BMB_bookmarksToolbar, #BMB_bookmarksToolbar+menuseparator,
+#BMB_bookmarksPopup menuseparator[builder="end"],
+#BMB_unsortedBookmarks, #addonbar-closebutton, #throbber-box,
+.search-go-button-stack, .toolbarbutton, .searchbar-dropmarker,
+#searchbar-go-button, #urlbar > #urlbar-icons > #star-button,
+#urlbar > #urlbar-icons > #star-button, #appmenu-toolbar-button,
+#urlbar .autocomplete-history-dropmarker, .tab-close-button > .toolbarbutton-icon,
+.tab-close-button, .tab-close-button:hover, #statusbar-display,
+#tabbrowser-tabs ~ #alltabs-button, tabbrowser toolbarbutton[class^="scrollbutton"],
+#tab-throbber, #identity-box, #TabsToolbar toolbarbutton[class^="scrollbutton"],
+#urlbar .autocomplete-history-dropmarker, #urlbar-go-button, #urlbar-reload-button,
+#urlbar-stop-button, .autocomplete-history-dropmarker, #go-button,
+.tabbrowser-arrowscrollbox > .tabs-newtab-button, .tab-throbber
+{display:none !important;}
+/* End Hidden Stuff */
