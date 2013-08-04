@@ -92,8 +92,8 @@ tab:not([selected="true"]) {
 #content browser {
 	margin-right: -14px !important;
 	visibilty: hidden !important;
-	overflow-y: hidden !important;
-	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	overflow-x: auto !important;
 }
 .tab-icon-image {
 	visibility: hidden!important;
