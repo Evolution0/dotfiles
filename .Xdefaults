@@ -1,0 +1,85 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.dpi:        75
+xft.lcdfilter: lcddefault
+Xft.antialias:  1
+Xft.rgba:       rgb
+Xft.hinting:    1
+Xft.hintstyle:  hintfull
+
+# -------- BASE -------- #
+  *foreground: 	 #9BBBC6
+  *background: 	 #1C1C23
+  *cursorColor:  #1C1C23
+  *colorUL:      #1E828C
+# ---------------------- #
+
+!Black
+*color0:               #323246
+*color8:               #323246
+
+!Red
+*color1:               #5A7882
+*color9:               #5A7882
+
+!Green
+*color2:               #8C8CA0
+*color10:              #8C8CA0
+
+!Yellow
+*color3:               #1E828C
+*color11:              #1E828C
+
+!Blue
+*color4:               #3C788C
+*color12:              #3C788C
+
+!Magenta
+*color5:               #6EA0B4
+*color13:              #6EA0B4
+
+!Cyan
+*color6:               #6E8CA0
+*color14:              #6E8CA0
+
+!White
+*color7:               #96BEC8
+*color15:              #96BEC8
+
+! ==== URXVT Settings ====
+
+URxvt.perl-ext-common:  default,matcher
+URxvt*font: xft:DroidSansMono:pixelsize=13
+URxvt*boldFont: xft:DroidSansMono:pixelsize=13
+URxvt*italicFont: xft:DroidSansMono:pixelsize=13
+URxvt*bolditalicFont: xft:DroidSansMono:pixelsize=13
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  true
+URxvt*scrollColor:      #000000
+
+! ==== Keymappings ====
+
+URxvt*keysym.C-t: perl:tabbedex:new_tab
+URxvt*keysym.C-Left: perl:tabbedex:prev_tab
+URxvt*keysym.C-Right: perl:tabbedex:next_tab
+URxvt*keysym.C-Up: perl:tabbedex:rename_tab
+
+! ==== Tabbedex colors ====
+
+URxvt.tabbar-fg: 7
+URxvt.tabbar-bg: 0
+URxvt.tab-fg:    7
+URxvt.tab-bg:    4
+URxvt.title-fg:  7
+URxvt.title-bg:  0
+
+URxvt.cursorUnderline:	true
+
+URxvt*matcher.button:   1
+URxvt*urlLauncher:      firefox 
+
+
+
+
+

@@ -1,0 +1,15 @@
+cpu_avg_samples 2
+net_avg_samples 2
+no_buffers yes
+out_to_console yes
+out_to_stderr no
+#out_to_x no
+update_interval 1.0
+uppercase no
+use_spacer none
+mpd_host localhost
+mpd_port 6600
+#Work out how to display zodiac sign based on if else ${if time %m/%d == "09/01"}
+
+TEXT
+\l  \f2${exec echo $DE}\fr \f7|\fr \f5${exec echo $SHELL | sed 's/\/bin\///'}\fr \r \f7à\f4 ${if_mpd_playing}\f2$mpd_artist\fr - $mpd_title \f5$mpd_elapsed/$mpd_length\fr \f7|\f4${else}${exec echo "\f2No Track\fr - \f7Playing\fr \f50:00/0:00\fr \f7\|\\f4"}${endif} ${time %m/%d/%y \f7É\f4 %l:%M %p  }
