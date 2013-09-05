@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+#Figure out how to work out rom directory
+#Too many variables!
+#A way to enter just the name and autocomplete after?
+#multi="mednafen"
+nes="mednafen"
+nesrom=""
+snes="mednafen"
+snesrom=""
+wons="mednafen"
+wonsrom=""
+gb="mednafen"
+gbrom=""
+gbc="mednafen"
+gbcrom=""
+gba="mednafen"
+gbarom=""
+n64=""
+n64rom=""
+md=""
+mdrom=""
+gen=""
+genrom=""
+32X=""
+32Xrom=""
+
+for filename in $1
+do
+        ext=${filename##*\.}
+        case "$ext" in
+        nes) "nes" "$filename" 
+           ;;
+        smc) "snes" "$filename" 
+           ;;
+        wsc) "wons" "$filename" 
+           ;;
+        gb) "gb" "$filename" 
+           ;;
+        gbc) "gbc" "$filename" 
+           ;;
+        gba) "gba" "$filename" 
+           ;;
+        z64) "n64" "$filename" 
+           ;;
+        gen) "gen" "$filename" 
+           ;;
+        32x) "32X" "$filename" 
+           ;;
+        *) echo "$filename : Does not match a known emulator"
+           ;;
+esac
+done

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+fixmp3() {
+	echo "ARE WE WORKING?"
+	info=$(mp3info -xp %o "$1" | sed 's/\n//')
+	if [ "$info" == "joint stereo" ]
+		then
+			lame --mp3input -s "${1%%.*}" "$1"
+			rm "$1"
+			mv "$1.mp3" "$1"
+	fi
+}
+IFS=$(echo -en "\n\b")
+for f in $(ls -R "$1" | awk '/:$/&&f{s=$0;f=0}/:$/&&!f{sub(/:$/,"");s=$0;f=1;next}NF&&f{ print s"/"$0 }'); do
+	[ ${f##*.} != 'mp3' ] && continue
+	fixmp3 "$f"
+done
